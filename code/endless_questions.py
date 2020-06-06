@@ -1,7 +1,7 @@
 import random
 number1 = number2 = number3 = answer = 1
-total_ques = total_correct = total_worng = 0
-print("Welcome.\nThese   are endless.\nIf you want to exit, type something else.")
+total_ques = total_correct = total_worng = hint_counter = 0
+print("Welcome to endless question game !.\nIf you want to exit or hint, type something else.")
 while 1:
     number1 = random.randint(1,1000)
     number2 = random.randint(1,1000)
@@ -23,9 +23,11 @@ while 1:
             print("You have answered {0} questions.".format(total_ques))
             print("You have answered {0} questions correct.".format(total_correct))
             print("You have answered {0} questions worng.".format(total_worng))
+            print("You used {0} hints.".format(hint_counter))
             exit()
         else:
             hint = input("Do want a know the answer ?(y/n)")
             if hint == "y":
                 print("{0}+{1}*{2}={3}".format(number1,number2,number3,number1+number2*number3))
                 print("But is's too late :(")
+                hint_counter += 1
