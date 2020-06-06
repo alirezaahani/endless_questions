@@ -1,2 +1,2 @@
-# endless_questions
-A program(kinda) for practice python3.
+# Endless questions
+A program(kinda) that I have written for practice python3.
